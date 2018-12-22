@@ -29,11 +29,11 @@
     (println res))) 
 
 
-(defn -main 
-  []
-  (doseq 
-    [channel-id, channel_ids]
-    (subscribe-channel channel-id, subscribe-url, callback-url, topic-url)))
+;(defn -main 
+;  []
+;  (doseq 
+;    [channel-id, channel_ids]
+;    (subscribe-channel channel-id, subscribe-url, callback-url, topic-url)))
   
 
 
