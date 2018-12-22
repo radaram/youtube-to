@@ -15,5 +15,4 @@
   
   :ring {:handler youtube-to.core/app}
   :plugins [[lein-ring "0.12.1"] 
-            [lein-kibit "0.1.6"]]
-  :min-lein-version "2.0.0")
+            [lein-kibit "0.1.6"]])
