@@ -1,14 +1,14 @@
 (ns youtube-to.subscription 
   (:require 
-    [clojure.string :as str]
-    [clj-http.client :as client] 
-    [environ.core :refer [env]]))
+    [clojure.string :as str]   
+    ;[environ.core :refer [env]]
+    [clj-http.client :as client]))
 
-(def server-name (env :server-name))
+(def server-name (System/getenv "SERVER_NAME"))
 (def subscribe-url "https://pubsubhubbub.appspot.com/subscribe")
 (def callback-url (str server-name "/api/v1/subscription/"))
 (def topic-url "https://www.youtube.com/xml/feeds/videos.xml?channel_id=")
-(def channel-ids (str/split (or (System/getenv "channel-ids") "") #","))
+(def channel-ids (str/split (or (System/getenv "CHANNEL_IDS") "") #","))
   
 (defn request 
   [url, method, data]

@@ -8,7 +8,7 @@
                  [ring/ring-jetty-adapter "1.6.3"], 
                  [ring/ring-mock "0.3.2"],
                  [compojure "1.6.1"], 
-                 [environ "1.1.0"],
+                 ;[environ "1.1.0"],
                  [crouton "0.1.2"], 
                  [org.clojure/data.json "0.2.6"]]
   ;:main youtube-to.core

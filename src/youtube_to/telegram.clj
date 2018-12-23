@@ -2,11 +2,11 @@
   (:require
     [clojure.string :as str]
     [clj-http.client :as client]
-    [environ.core :refer [env]]
+    ;[environ.core :refer [env]]
     [clojure.data.json :as json]))
 
-(def bot-token (env :telegram-bot-token))
-(def chat-id (env :telegram-chat-id))
+(def bot-token (System/getenv "TELEGRAM_BOT_TOKEN"))
+(def chat-id (System/getenv "TELEGRAM_CHAT_ID"))
 (def telegram-base-url "https://api.telegram.org")
 (def send-msg-url (str telegram-base-url "/bot" bot-token "/sendmessage"))
 
