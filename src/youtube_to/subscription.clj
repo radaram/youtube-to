@@ -4,9 +4,9 @@
     ;[environ.core :refer [env]]
     [clj-http.client :as client]))
 
-(def server-name (System/getenv "SERVER_NAME"))
+(def base-url (System/getenv "BASE_URL"))
 (def subscribe-url "https://pubsubhubbub.appspot.com/subscribe")
-(def callback-url (str server-name "/api/v1/subscription/"))
+(def callback-url (str base-url "/api/v1/subscription/"))
 (def topic-url "https://www.youtube.com/xml/feeds/videos.xml?channel_id=")
 (def channel-ids (str/split (or (System/getenv "CHANNEL_IDS") "") #","))
   
