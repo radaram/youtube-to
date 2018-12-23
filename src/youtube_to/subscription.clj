@@ -8,7 +8,7 @@
 (def subscribe-url "https://pubsubhubbub.appspot.com/subscribe")
 (def callback-url (str server-name "/api/v1/subscription/"))
 (def topic-url "https://www.youtube.com/xml/feeds/videos.xml?channel_id=")
-;(def channel-ids (str/split (env :channel-ids) #","))
+(def channel-ids (str/split (env :channel-ids) #","))
   
 (defn request 
   [url, method, data]
@@ -32,7 +32,7 @@
 (defn -main 
   []
   (doseq 
-    [channel-id, channel_ids]
+    [channel-id, channel-ids]
     (subscribe-channel channel-id, subscribe-url, callback-url, topic-url)))
   
 
