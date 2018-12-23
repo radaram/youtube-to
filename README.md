@@ -1,7 +1,7 @@
 # youtube-to
 ------------------------
 
-Notification about new YouTube video in services.
+Notification about new YouTube video to services.
 Currently only telegram is supported.
 Used by PubSubHubbub protocol specification.
 
